@@ -1,0 +1,73 @@
+@use "../themes/variables";
+@use "../themes/mixsin";
+@use "../components/button";
+.home_bg {
+  background-color: variables.$home_bg;
+}
+.home {
+  @extend %home_flex;
+  h1 {
+    font-size: 45px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    color: variables.$text_color;
+    margin-top: 80px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    color: variables.$text_color;
+    line-height: 1.5;
+  }
+  @extend %home_btn;
+  .home_img {
+    img {
+      margin-top: 40px;
+      width: 500px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home_bg {
+    height: 760px;
+    padding-top: 40px;
+  }
+  .home {
+    display: block;
+    h1 {
+      font-size: 33px;
+      br {
+        display: none;
+      }
+    }
+    p {
+      font-size: 17px;
+      br {
+        display: none;
+      }
+    }
+    button {
+      margin-top: 20px;
+    }
+    .home_img {
+      img {
+        width: 400px;
+        margin-left: -35px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+.orderBg{
+  margin-top: 90px;
+  background: linear-gradient(314.89deg, #43A548 -88.09%, #52E259 142.78%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  p{
+    font-size: 16px;
+  
+  }
+}

@@ -1,0 +1,209 @@
+@use "../themes/mixsin";
+@use "../themes/variables";
+@use "../components/button";
+.cart {
+  background-color: variables.$main_bg;
+  padding-top: 60px;
+  margin-bottom: 60px;
+  .parent {
+    .parent_flex {
+      @extend %flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      .parent_cart {
+        width: 640px;
+        height: 280px;
+        background-color: variables.$home_bg;
+        border-radius: 30px;
+        padding: 20px 30px;
+        .parent_img {
+          @extend %flex;
+          gap: 10px;
+          h3 {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: "Inter", sans-serif;
+            color: variables.$text_color;
+          }
+        }
+        p {
+          font-size: 15px;
+          font-weight: 400;
+          font-family: "Inter", sans-serif;
+          line-height: 1.6;
+          color: variables.$cart_text;
+        }
+        @extend %cart_btn;
+      }
+    }
+    .parentFelx {
+      @extend %flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      .parentCart {
+        width: 420px;
+        height: 280px;
+        border-radius: 30px;
+        background-color: variables.$bg_color;
+        padding: 20px 30px;
+        .parent_imG {
+          @extend %flex;
+          gap: 10px;
+          h3 {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: "Inter", sans-serif;
+            color: variables.$text_color;
+          }
+        }
+        p {
+          font-size: 15px;
+          font-weight: 400;
+          font-family: "Inter", sans-serif;
+          line-height: 1.6;
+          color: variables.$cart_text;
+        }
+        @extend %grid_btn;
+      }
+    }
+  }
+  .cart_gift {
+    @extend %navbar_flex;
+    gap: 50px;
+    width: 1200px;
+    height: 60px;
+    background-color: variables.$cart_gift;
+    border-radius: 20px;
+    padding: 25px;
+    .gift {
+      @extend %flex;
+      gap: 20px;
+      img {
+        width: 40px;
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
+        color: variables.$gift_text;
+      }
+    }
+    @extend %gift_btn;
+  }
+  .carT {
+    margin-top: 50px;
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+      font-family: "Inter", sans-serif;
+      color: variables.$text_color;
+    }
+    .CarTT {
+      @extend %flex;
+      gap: 20px;
+      .cartt {
+        width: 640px;
+        height: 430px;
+        border-radius: 30px;
+        padding: 10px 10px;
+        h4 {
+          font-size: 20px;
+          font-weight: 600;
+          font-family: "Inter", sans-serif;
+          color: variables.$text_color;
+          text-align: center;
+        }
+        &:nth-child(1) {
+          background-color: variables.$bg_color;
+          ul {
+            li {
+              i {
+                font-size: 18px;
+                color: variables.$icon_color;
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          background-color:#e1f7e2;
+          ul {
+            li {
+              i {
+                color: variables.$icon_Color;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            line-height: 2;
+            color: variables.$cart_text;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .cart {
+    .parent {
+      .parent_flex {
+        display: block;
+        .parent_cart {
+          width: 300px;
+          height: 390px;
+          margin-bottom: 20px;
+        }
+      }
+      .parentFelx {
+        display: block;
+        margin-top: 20px;
+        .parentCart {
+          width: 300px;
+          height: 325px;
+          margin-bottom: 20px;
+          p {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .cart_gift {
+      width: 310px;
+      height: 170px;
+      display: block;
+      button {
+        width: 300px;
+      }
+    }
+    .carT {
+      display: block;
+      .CarTT {
+        display: block;
+        margin-top: 20px;
+        .cartt {
+          width: 360px;
+          height: 550px;
+          padding: 10px 0;
+          margin-top: 20px;
+          ul {
+            li {
+              line-height: 1.5;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
